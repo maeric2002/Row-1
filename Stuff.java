@@ -27,6 +27,18 @@ public class Stuff {
 	}
 
     // Returns all prime factors of a number
-    static int[] factorize(int a);
+    static int[] factorize(int a){
+		int num = a;
+		ArrayList <int> factors = new ArrayList<int>;
+		for (int i = 2; i <= num; i++){
+			while (n % i == 0){
+				factors.add(i);
+				n /= i;
+			}
+		}
+		return factors;
+	}
+
+		
 
 }
