@@ -12,7 +12,17 @@ public class Stuff {
     static int[] sort(int[] a);
 
     // Returns the number of occurances of each letter (ABCD...) in a given string
-    static int[] letterCount(String s);
+    static int[] letterCount(String s){
+	String s = s.toLowerCase();
+        int[] occur = new int[26];
+        int pos = 0;
+        for(int i=0;i<s.length();i++){
+            pos = Character.codePointAt(s, i)-97;
+            if(pos<26)
+                occur[pos]++;
+        }
+	return occur;
+    }
 
     // Returns the GCD of two numbers
     // Must use Euclid's algorithm
